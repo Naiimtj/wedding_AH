@@ -13,7 +13,7 @@ const ShowMore = ({ moreInfo }) => {
         onClick={() => setShowMore(!showMore)}
         alt={t("Button to display more information")}
       >
-        <div className="flex items-center text-violet-500 dark:text-lilaPortfolio md:dark:hover:text-white md:hover:text-violet-700 fill-violet-500 dark:fill-lilaPortfolio md:dark:hover:fill-white md:hover:fill-violet-700 transition duration-300">
+        <div className="flex items-center text-violet-500 dark:text-blueWedding md:dark:hover:text-white md:hover:text-violet-700 fill-violet-500 dark:fill-blueWedding md:dark:hover:fill-white md:hover:fill-violet-700 transition duration-300">
           {t("More")}...
           {!showMore ? <ArrowDown /> : <ArrowUp />}
         </div>

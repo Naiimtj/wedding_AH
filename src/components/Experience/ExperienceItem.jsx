@@ -38,25 +38,31 @@ const ExperienceItem = ({
   return (
     <div className="relative mx-12 pb-10 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
       <div className="relative md:pb-12 md:col-span-2">
-        <span className="text-lilaLightPortfolio -left-[44px] absolute rounded-full text-5xl">
+        <span className="text-blueLightWedding -left-[44px] absolute rounded-full text-5xl">
           &bull;
         </span>
-        <h3 className="text-xl font-bold text-lilaLightPortfolio">{title}</h3>
-        {link ? <Link
-          className={`flex font-semibold text-xl ${
-            link === ""
-              ? "text-grayLightPortfolio dark:text-white"
-              : "text-violet-500 dark:text-lilaPortfolio md:dark:hover:text-white md:hover:text-violet-700 fill-violet-500 dark:fill-lilaPortfolio md:dark:hover:fill-white md:hover:fill-violet-700 transition duration-300"
-          }`}
-          to={link}
-          target="_blank"
-        > <div className="flex gap-2 items-center">
-          {company}  <LinkIcon className="size-4" />
-        </div>
-        </Link>: <h4 className="font-semibold text-xl text-grayLightPortfolio dark:text-white">
-          {company}
-        </h4>}
-        <time className="p-0 m-0 text-sm text-grayLightPortfolio/80 dark:text-white/80">
+        <h3 className="text-xl font-bold text-blueLightWedding">{title}</h3>
+        {link ? (
+          <Link
+            className={`flex font-semibold text-xl ${
+              link === ""
+                ? "text-grayLightWedding dark:text-white"
+                : "text-violet-500 dark:text-blueWedding md:dark:hover:text-white md:hover:text-violet-700 fill-violet-500 dark:fill-blueWedding md:dark:hover:fill-white md:hover:fill-violet-700 transition duration-300"
+            }`}
+            to={link}
+            target="_blank"
+          >
+            {" "}
+            <div className="flex gap-2 items-center">
+              {company} <LinkIcon className="size-4" />
+            </div>
+          </Link>
+        ) : (
+          <h4 className="font-semibold text-xl text-grayLightWedding dark:text-white">
+            {company}
+          </h4>
+        )}
+        <time className="p-0 m-0 text-sm text-grayLightWedding/80 dark:text-white/80">
           {date}
         </time>
         {/* // - PROGRAMS */}
@@ -73,7 +79,7 @@ const ExperienceItem = ({
         </div>
       </div>
       {/* // - DESCRIPTION */}
-      <div className="flex flex-col gap-2 text-grayLightPortfolio dark:text-gray-300 md:col-span-3">
+      <div className="flex flex-col gap-2 text-grayLightWedding dark:text-gray-300 md:col-span-3">
         {description}
         {more && more.props && <ShowMore moreInfo={more} />}
         {/* // - LANGUAGES */}

@@ -7,7 +7,7 @@ export default function Footer() {
   const [t] = useTranslation("translation");
 
   return (
-    <footer className="text-center dark:text-grayPortfolio text-black lg:text-left mx-6">
+    <footer className="text-center dark:text-grayWedding text-black lg:text-left mx-6">
       <div className="flex items-center justify-center border-t-2 border-neutral-200 pt-4 lg:justify-center">
         {/* // - Social network icons container */}
         <div className="flex justify-center gap-1">
@@ -15,7 +15,7 @@ export default function Footer() {
             to="mailto:naiim.tj@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:text-grayPortfolio text-black dark:hover:text-lilaPortfolio hover:text-lilaLightPortfolio"
+            className="dark:text-grayWedding text-black dark:hover:text-blueWedding hover:text-blueLightWedding"
             alt={t("Button to contact me")}
           >
             <MailIcon />
@@ -24,7 +24,7 @@ export default function Footer() {
             to="https://linkedin.com/in/naiim-taefy-jimenez"
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:text-grayPortfolio text-black dark:hover:text-lilaPortfolio hover:text-lilaLightPortfolio"
+            className="dark:text-grayWedding text-black dark:hover:text-blueWedding hover:text-blueLightWedding"
             alt={t("Button to my LinkedIn")}
           >
             <LinkedInIcon />
@@ -33,7 +33,7 @@ export default function Footer() {
             to="https://github.com/Naiimtj"
             target="_blank"
             rel="noopener noreferrer"
-            className="dark:text-grayPortfolio text-black dark:hover:text-lilaPortfolio hover:text-lilaLightPortfolio"
+            className="dark:text-grayWedding text-black dark:hover:text-blueWedding hover:text-blueLightWedding"
             alt={t("Button to my GitHub")}
           >
             <GitHub />
@@ -47,7 +47,7 @@ export default function Footer() {
                 ? "Naiim Taefy Jiménez - Resume_CV.pdf"
                 : "Naiim Taefy Jiménez - Curriculum.pdf"
             }
-            className="dark:text-grayPortfolio text-black dark:hover:text-lilaPortfolio hover:text-lilaLightPortfolio"
+            className="dark:text-grayWedding text-black dark:hover:text-blueWedding hover:text-blueLightWedding"
             alt={t("Button Download Resume_CV pdf")}
           >
             <Download />
@@ -58,7 +58,7 @@ export default function Footer() {
       <div className="p-2 text-center">
         <span>© 2024 Copyright:</span>
         <Link
-          className="font-semibold dark:text-grayPortfolio text-black ml-2 dark:hover:text-lilaPortfolio hover:text-lilaLightPortfolio"
+          className="font-semibold dark:text-grayWedding text-black ml-2 dark:hover:text-blueWedding hover:text-blueLightWedding"
           to="https://github.com/Naiimtj"
         >
           Naiim Taefy

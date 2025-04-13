@@ -5,10 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lilaPortfolio: "#9C92F8",
-        lilaLightPortfolio: "#7c3aed",
-        grayPortfolio: "#E5E5E5",
-        grayLightPortfolio: "#1f2937",
+        blueWedding: "#5eb7c4",
+        blueLightWedding: "#096781",
+        grayWedding: "#E5E5E5",
+        grayLightWedding: "#1f2937",
       },
     },
   },

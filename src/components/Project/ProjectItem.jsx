@@ -69,7 +69,7 @@ const ProjectItem = ({
         >
           <div ref={menuButtonRef}>
             {expandedImage === image ? (
-              <div className="absolute right-1 top-1 cursor-pointer md:col-start-2 md:col-span-4 sm:col-auto hover:text-lilaPortfolio">
+              <div className="absolute right-1 top-1 cursor-pointer md:col-start-2 md:col-span-4 sm:col-auto hover:text-blueWedding">
                 <Close
                   className="inline-block align-middle"
                   size={24}
@@ -102,7 +102,7 @@ const ProjectItem = ({
           expandedImage ? "blur-md" : ""
         }`}
       >
-        <h3 className="text-2xl font-bold text-lilaLightPortfolio dark:text-lilaLightPortfolio">
+        <h3 className="text-2xl font-bold text-blueLightWedding dark:text-blueLightWedding">
           {title}
         </h3>
         <div className="flex flex-wrap mt-2">

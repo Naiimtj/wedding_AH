@@ -161,9 +161,9 @@ const NavBar = () => {
                       <Link
                         className={`${
                           activeSection === "experience"
-                            ? "dark:text-lilaPortfolio font-bold text-lilaLightPortfolio"
-                            : "dark:text-grayPortfolio text-grayLightPortfolio "
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-lilaPortfolio transition duration-300 flex items-center`}
+                            ? "dark:text-blueWedding font-bold text-blueLightWedding"
+                            : "dark:text-grayWedding text-grayLightWedding "
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection("experience")}
                         alt={t("Button to Section Work Experience")}
                       >
@@ -175,9 +175,9 @@ const NavBar = () => {
                       <Link
                         className={`${
                           activeSection === "projects"
-                            ? "dark:text-lilaPortfolio font-bold text-lilaLightPortfolio"
-                            : "dark:text-grayPortfolio text-grayLightPortfolio "
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-lilaPortfolio transition duration-300 flex items-center`}
+                            ? "dark:text-blueWedding font-bold text-blueLightWedding"
+                            : "dark:text-grayWedding text-grayLightWedding "
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection("projects")}
                         alt={t("Button to Section Projects")}
                       >
@@ -189,9 +189,9 @@ const NavBar = () => {
                       <Link
                         className={`${
                           activeSection === "about-me"
-                            ? "dark:text-lilaPortfolio font-bold text-lilaLightPortfolio"
-                            : "dark:text-grayPortfolio text-grayLightPortfolio "
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-lilaPortfolio transition duration-300 flex items-center`}
+                            ? "dark:text-blueWedding font-bold text-blueLightWedding"
+                            : "dark:text-grayWedding text-grayLightWedding "
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection("about-me")}
                         alt={t("Button to About Me")}
                       >
