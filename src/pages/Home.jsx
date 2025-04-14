@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { GitHub, LinkedInIcon, MailIcon } from "../assets/icons/SocialMedia";
 import { Download } from "../assets/icons";
-import personalImageAlt from "/me.webp";
+import BigBackgraoundHA from "/me.webp";
 import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
 import AboutMe from "./AboutMe";
@@ -19,15 +19,15 @@ const Home = () => {
           <div className="flex gap-6 mb-4">
             <img
               className="rounded-full shadow-lg size-32"
-              src={personalImageAlt}
-              alt={t("Picture Naiim")}
+              src={BigBackgraoundHA}
+              alt={t("Picture Hadil & Álex")}
             />
             {/* <Badge txtAlt={t("Button Available for work")}>
               {t("Available for work")}
             </Badge> */}
           </div>
           <h1 className="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
-            {t("Hey, I'm")} Naiim
+            Hadil & Álex
           </h1>
           <div className="md:mt-6 mt-4 text-xl text-gray-800 dark:text-gray-300">
             <p className="dark:[&>strong]:text-purple-300 [&>strong]:text-purple-500 [&>strong]:font-semibold">

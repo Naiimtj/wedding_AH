@@ -45,8 +45,8 @@ const ThemeSwitcher = () => {
         ? "rgb(2 6 23)"
         : "rgb(249 250 251)";
       const scrollbarThumbColor = isDarkMode
-        ? "linear-gradient(rgb(2 6 23), rgb(87, 41, 167), rgb(2 6 23))"
-        : "linear-gradient(rgb(249 250 251), rgb(87, 41, 167), rgb(249 250 251))";
+        ? "linear-gradient(rgb(2 6 23), rgb(9, 103, 129), rgb(2 6 23))"
+        : "linear-gradient(rgb(249 250 251), rgb(9, 103, 129), rgb(249 250 251))";
 
       document.documentElement.style.setProperty(
         "--scrollbar-track-color",
