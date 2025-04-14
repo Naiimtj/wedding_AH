@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { ProfileCheck } from "../assets/icons";
-import SectionContainer from "../components/SectionContainer";
-import AboutMeItem from "../components/AboutMeItem";
+import { ProfileCheck } from "../../assets/icons";
+import SectionContainer from "../../components/SectionContainer";
+import AboutMeItem from "../../components/AboutMeItem";
 
 const AboutMe = () => {
   const [t] = useTranslation("translation");

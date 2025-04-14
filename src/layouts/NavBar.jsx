@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Briefcase, Code, MobileMenu, ProfileCheck } from '../assets/icons';
+import { MobileMenu } from '../assets/icons';
 import NavMenu from '../components/NavMenu';
 
 function scrollToSection(id) {
@@ -21,17 +21,17 @@ const NavBar = () => {
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY + windowHeight / 2;
 
-      const experienceSection = document.getElementById('experience');
+      const weddingPlaceSection = document.getElementById('wedding-place');
       const projectsSection = document.getElementById('projects');
       const aboutMeSection = document.getElementById('about-me');
 
       if (
-        experienceSection &&
-        experienceSection.offsetTop <= scrollPosition &&
-        experienceSection.offsetTop + experienceSection.offsetHeight >
+        weddingPlaceSection &&
+        weddingPlaceSection.offsetTop <= scrollPosition &&
+        weddingPlaceSection.offsetTop + weddingPlaceSection.offsetHeight >
           scrollPosition
       ) {
-        setActiveSection('experience');
+        setActiveSection('wedding-place');
       } else if (
         projectsSection &&
         projectsSection.offsetTop <= scrollPosition &&
@@ -160,15 +160,14 @@ const NavBar = () => {
                     <li>
                       <Link
                         className={`${
-                          activeSection === 'experience'
+                          activeSection === 'wedding-place'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection('experience')}
-                        alt={t('Button to Section Work Experience')}
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding hover:underline hover:underline-offset-1 dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        onClick={() => scrollToSection('wedding-place')}
+                        alt={t('Button to Section Wedding Place')}
                       >
-                        {/* <Briefcase className="size-6 mr-1" /> */}
-                        {t('Place')}
+                        {t('Wedding Place')}
                       </Link>
                     </li>
                     <li>
@@ -177,7 +176,7 @@ const NavBar = () => {
                           activeSection === 'projects'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection('projects')}
                         alt={t('Button to Section Projects')}
                       >
@@ -191,7 +190,7 @@ const NavBar = () => {
                           activeSection === 'about-me'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection('about-me')}
                         alt={t('Button to About Me')}
                       >
@@ -205,7 +204,7 @@ const NavBar = () => {
                           activeSection === 'about-me'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection('about-me')}
                         alt={t('Button to About Me')}
                       >
@@ -219,7 +218,7 @@ const NavBar = () => {
                           activeSection === 'about-me'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
-                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
                         onClick={() => scrollToSection('about-me')}
                         alt={t('Button to About Me')}
                       >

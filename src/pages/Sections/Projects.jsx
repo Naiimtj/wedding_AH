@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Code } from "../assets/icons";
-import SectionContainer from "../components/SectionContainer";
-import Project from "../components/Project/Project";
+import { Code } from "../../assets/icons";
+import SectionContainer from "../../components/SectionContainer";
+import Project from "../../components/Project/Project";
 
 const Projects = () => {
   const [t] = useTranslation("translation");
