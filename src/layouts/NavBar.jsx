@@ -1,18 +1,18 @@
-import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { Briefcase, Code, MobileMenu, ProfileCheck } from "../assets/icons";
-import NavMenu from "../components/NavMenu";
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Briefcase, Code, MobileMenu, ProfileCheck } from '../assets/icons';
+import NavMenu from '../components/NavMenu';
 
 function scrollToSection(id) {
   const element = document.getElementById(id);
   if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
+    element.scrollIntoView({ behavior: 'smooth' });
   }
 }
 
 const NavBar = () => {
-  const [t] = useTranslation("translation");
+  const [t] = useTranslation('translation');
   const [activeSection, setActiveSection] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,9 +21,9 @@ const NavBar = () => {
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY + windowHeight / 2;
 
-      const experienceSection = document.getElementById("experience");
-      const projectsSection = document.getElementById("projects");
-      const aboutMeSection = document.getElementById("about-me");
+      const experienceSection = document.getElementById('experience');
+      const projectsSection = document.getElementById('projects');
+      const aboutMeSection = document.getElementById('about-me');
 
       if (
         experienceSection &&
@@ -31,27 +31,27 @@ const NavBar = () => {
         experienceSection.offsetTop + experienceSection.offsetHeight >
           scrollPosition
       ) {
-        setActiveSection("experience");
+        setActiveSection('experience');
       } else if (
         projectsSection &&
         projectsSection.offsetTop <= scrollPosition &&
         projectsSection.offsetTop + projectsSection.offsetHeight >
           scrollPosition
       ) {
-        setActiveSection("projects");
+        setActiveSection('projects');
       } else if (
         aboutMeSection &&
         aboutMeSection.offsetTop <= scrollPosition &&
         aboutMeSection.offsetTop + aboutMeSection.offsetHeight > scrollPosition
       ) {
-        setActiveSection("about-me");
+        setActiveSection('about-me');
       } else {
         setActiveSection(null);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const currentScreenWidth = window.innerWidth;
   const [screenWidth, setScreenWidth] = useState(currentScreenWidth < 767);
@@ -65,10 +65,10 @@ const NavBar = () => {
       }
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, [screenWidth]);
   const [scrolled, setScrolled] = useState(false);
@@ -83,10 +83,10 @@ const NavBar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -102,10 +102,10 @@ const NavBar = () => {
       }
     };
     // Add the event handler to the document
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
     // Clearing the event handler when unmounting the component
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [menuButtonRef]);
   return (
@@ -114,8 +114,8 @@ const NavBar = () => {
         <div
           className={`absolute z-50 md:hidden flex gap-6 mt-5 backdrop-blur-md ${
             activeSection
-              ? "dark:bg-transparent bg-transparent md:dark:bg-black/25 md:bg-white/25"
-              : ""
+              ? 'dark:bg-transparent bg-transparent md:dark:bg-black/25 md:bg-white/25'
+              : ''
           } py-2 rounded-xl`}
         >
           <NavMenu />
@@ -126,9 +126,9 @@ const NavBar = () => {
           <div
             className={`flex items-center backdrop-blur-md ${
               scrolled
-                ? "dark:bg-black/25 bg-white/25"
+                ? 'dark:bg-black/25 bg-white/25'
                 : `md:dark:bg-transparent md:bg-transparent ${
-                    menuOpen ? "dark:bg-black/25 bg-white/25" : ""
+                    menuOpen ? 'dark:bg-black/25 bg-white/25' : ''
                   }`
             } md:p-2 md:mt-0 mt-5 rounded-xl `}
           >
@@ -142,10 +142,10 @@ const NavBar = () => {
                     type="button"
                     className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400 "
                     onClick={() => setMenuOpen(!menuOpen)}
-                    alt={menuOpen ? t("Close main menu") : t("Open main menu")}
+                    alt={menuOpen ? t('Close main menu') : t('Open main menu')}
                   >
                     <span className="sr-only">
-                      {menuOpen ? t("Close main menu") : t("Open main menu")}
+                      {menuOpen ? t('Close main menu') : t('Open main menu')}
                     </span>
                     <MobileMenu />
                   </button>
@@ -153,50 +153,78 @@ const NavBar = () => {
                 {/* // - MENU */}
                 <div
                   className={`items-center justify-between ${
-                    !menuOpen ? "hidden" : ""
+                    !menuOpen ? 'hidden' : ''
                   } w-full md:flex md:w-auto md:order-1 pr-4 md:pr-0`}
                 >
                   <ul className="flex flex-col my-4 font-medium md:flex-row md:my-0 md:space-x-8 rtl:space-x-reverse items-end">
                     <li>
                       <Link
                         className={`${
-                          activeSection === "experience"
-                            ? "dark:text-blueWedding font-bold text-blueLightWedding"
-                            : "dark:text-grayWedding text-grayLightWedding "
+                          activeSection === 'experience'
+                            ? 'dark:text-blueWedding font-bold text-blueLightWedding'
+                            : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection("experience")}
-                        alt={t("Button to Section Work Experience")}
+                        onClick={() => scrollToSection('experience')}
+                        alt={t('Button to Section Work Experience')}
                       >
-                        <Briefcase className="size-6 mr-1" />
-                        {t("Work Experience")}
+                        {/* <Briefcase className="size-6 mr-1" /> */}
+                        {t('Place')}
                       </Link>
                     </li>
                     <li>
                       <Link
                         className={`${
-                          activeSection === "projects"
-                            ? "dark:text-blueWedding font-bold text-blueLightWedding"
-                            : "dark:text-grayWedding text-grayLightWedding "
+                          activeSection === 'projects'
+                            ? 'dark:text-blueWedding font-bold text-blueLightWedding'
+                            : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection("projects")}
-                        alt={t("Button to Section Projects")}
+                        onClick={() => scrollToSection('projects')}
+                        alt={t('Button to Section Projects')}
                       >
-                        <Code className="size-6 mr-1" />
-                        {t("Projects")}
+                        {/* <Code className="size-6 mr-1" /> */}
+                        {t('Recommendations')}
                       </Link>
                     </li>
                     <li>
                       <Link
                         className={`${
-                          activeSection === "about-me"
-                            ? "dark:text-blueWedding font-bold text-blueLightWedding"
-                            : "dark:text-grayWedding text-grayLightWedding "
+                          activeSection === 'about-me'
+                            ? 'dark:text-blueWedding font-bold text-blueLightWedding'
+                            : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection("about-me")}
-                        alt={t("Button to About Me")}
+                        onClick={() => scrollToSection('about-me')}
+                        alt={t('Button to About Me')}
                       >
-                        <ProfileCheck className="size-6 mr-1" />
-                        {t("About Me")}
+                        {/* <ProfileCheck className="size-6 mr-1" /> */}
+                        {t('Arrival options')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          activeSection === 'about-me'
+                            ? 'dark:text-blueWedding font-bold text-blueLightWedding'
+                            : 'dark:text-grayWedding text-grayLightWedding '
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        onClick={() => scrollToSection('about-me')}
+                        alt={t('Button to About Me')}
+                      >
+                        {/* <ProfileCheck className="size-6 mr-1" /> */}
+                        {t('Interest Destinations')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className={`${
+                          activeSection === 'about-me'
+                            ? 'dark:text-blueWedding font-bold text-blueLightWedding'
+                            : 'dark:text-grayWedding text-grayLightWedding '
+                        } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-black dark:hover:text-blueWedding transition duration-300 flex items-center`}
+                        onClick={() => scrollToSection('about-me')}
+                        alt={t('Button to About Me')}
+                      >
+                        {/* <ProfileCheck className="size-6 mr-1" /> */}
+                        {t('Gift')}
                       </Link>
                     </li>
                   </ul>

@@ -14,3 +14,17 @@
     background: var(--scrollbar-thumb-color, linear-gradient(rgb(94 183 196), rgb(9, 103, 129), rgb(94 183 196)));
     border-radius: 100vw;
 }
+
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('./assets/fonts/SourceSansPro-Regular.ttf') format('truetype-variations');
+  }
+
+@font-face {
+    font-family: 'Allura';
+    src: url('./assets/fonts/Allura-Regular.ttf') format('truetype-variations');
+  }
+
+.text-shadow-custom {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5);
+}
