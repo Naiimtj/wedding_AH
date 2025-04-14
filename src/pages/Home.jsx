@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { GitHub, LinkedInIcon, MailIcon } from "../assets/icons/SocialMedia";
-import { Download } from "../assets/icons";
 import BigBackgraoundHA from "/me.webp";
 import WorkExperience from "./WorkExperience";
 import Projects from "./Projects";
@@ -8,7 +7,6 @@ import AboutMe from "./AboutMe";
 import SectionContainer from "../components/SectionContainer";
 // import Badge from "../components/Badge";
 import SocialPill from "../components/SocialPill";
-import DownloadPill from "../components/DownloadPill";
 
 const Home = () => {
   const [t] = useTranslation("translation");
@@ -63,20 +61,6 @@ const Home = () => {
               <GitHub className="md:size-5 size-8" />
               <span className="hidden md:block">GitHub</span>
             </SocialPill>
-            <DownloadPill
-              url={`/Naiim Taefy Jiménez - ${
-                t("en-EN") === "en-EN" ? "Resume_CV" : "Curriculum"
-              }.pdf`}
-              name={
-                t("en-EN") === "en-EN"
-                  ? "Naiim Taefy Jiménez - Resume_CV.pdf"
-                  : "Naiim Taefy Jiménez - Curriculum.pdf"
-              }
-              txtAlt={t("Button Download Resume_CV pdf")}
-            >
-              <Download className="md:size-5 size-8" />
-              {t("Download CV")}
-            </DownloadPill>
           </nav>
         </div>
       </SectionContainer>

@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { GitHub, LinkedInIcon, MailIcon } from "../assets/icons/SocialMedia";
-import { Download } from "../assets/icons";
+import { LinkedInIcon, MailIcon } from "../assets/icons/SocialMedia";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -29,29 +28,6 @@ export default function Footer() {
           >
             <LinkedInIcon />
           </Link>
-          <Link
-            to="https://github.com/Naiimtj"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="dark:text-grayWedding text-black dark:hover:text-blueWedding hover:text-blueLightWedding"
-            alt={t("Button to my GitHub")}
-          >
-            <GitHub />
-          </Link>
-          <a
-            href={`/Naiim Taefy Jiménez - ${
-              t("en-EN") === "en-EN" ? "Resume_CV" : "Curriculum"
-            }.pdf`}
-            download={
-              t("en-EN") === "en-EN"
-                ? "Naiim Taefy Jiménez - Resume_CV.pdf"
-                : "Naiim Taefy Jiménez - Curriculum.pdf"
-            }
-            className="dark:text-grayWedding text-black dark:hover:text-blueWedding hover:text-blueLightWedding"
-            alt={t("Button Download Resume_CV pdf")}
-          >
-            <Download />
-          </a>
         </div>
       </div>
       {/* // - Copyright section*/}
