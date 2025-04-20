@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import BigBackgraoundHA from '/H&A-Background.webp';
 import WeddingPlace from './Sections/WeddingPlace';
-import Projects from './Sections/Projects';
+import Projects from './Sections/Recommendations';
 import AboutMe from './Sections/AboutMe';
 import SectionContainer from '../components/SectionContainer';
 import Divider from '../assets/icons/Divider';

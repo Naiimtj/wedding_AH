@@ -22,7 +22,7 @@ const NavBar = () => {
       const scrollPosition = window.scrollY + windowHeight / 2;
 
       const weddingPlaceSection = document.getElementById('wedding-place');
-      const projectsSection = document.getElementById('projects');
+      const projectsSection = document.getElementById('recommendations');
       const aboutMeSection = document.getElementById('about-me');
 
       if (
@@ -38,7 +38,7 @@ const NavBar = () => {
         projectsSection.offsetTop + projectsSection.offsetHeight >
           scrollPosition
       ) {
-        setActiveSection('projects');
+        setActiveSection('recommendations');
       } else if (
         aboutMeSection &&
         aboutMeSection.offsetTop <= scrollPosition &&
@@ -173,12 +173,12 @@ const NavBar = () => {
                     <li>
                       <Link
                         className={`${
-                          activeSection === 'projects'
+                          activeSection === 'recommendations'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection('projects')}
-                        alt={t('Button to Section Projects')}
+                        onClick={() => scrollToSection('recommendations')}
+                        alt={t('Button to Section Recommendations')}
                       >
                         {/* <Code className="size-6 mr-1" /> */}
                         {t('Recommendations')}

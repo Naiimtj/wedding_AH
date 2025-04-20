@@ -12,10 +12,10 @@ const CardCountdown = ({ timeLeft, text }) => {
 export default CardCountdown;
 
 CardCountdown.defaultProps = {
-  timeLeft: '',
+  timeLeft: 0,
   text: '',
 };
 CardCountdown.propTypes = {
-  timeLeft: PropTypes.string,
+  timeLeft: PropTypes.number,
   text: PropTypes.string,
 };
