@@ -44,10 +44,10 @@ const Place = () => {
       </div>
       <div className="text-4xl">27 Junio 2025</div>
       <div className="text-2xl font-semibold grid grid-cols-4 gap-x-4">
-        <CardCountdown timeLeft={timeLeft.days} text={t('Días')} />
-        <CardCountdown timeLeft={timeLeft.hours} text={t('Horas')} />
-        <CardCountdown timeLeft={timeLeft.minutes} text={t('Minutos')} />
-        <CardCountdown timeLeft={timeLeft.seconds} text={t('Segundos')} />
+        <CardCountdown timeLeft={timeLeft.days} text={t('D')} />
+        <CardCountdown timeLeft={timeLeft.hours} text={t('H')} />
+        <CardCountdown timeLeft={timeLeft.minutes} text={t('Min')} />
+        <CardCountdown timeLeft={timeLeft.seconds} text={t('Seg')} />
       </div>
       <div className="relative flex justify-center md:w-2/3 w-full h-auto mt-10">
         <img
@@ -90,9 +90,9 @@ const Place = () => {
               onClick={() =>
                 window.open('https://goo.gl/maps/9v2Y1a5Z3xk', '_blank')
               }
-              className="text-xl bg-white text-blueLightWedding font-bold py-2 px-12 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
+              className="mt-8 text-4xl bg-white text-blueLightWedding font-bold py-4 px-12 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
             >
-              <WeddingPlace className="inline-block mr-2" />
+              <WeddingPlace className="inline-block mr-2 w-10" />
               {t('Open Map')}
             </button>
           </div>

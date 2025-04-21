@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import BigBackgraoundHA from '/H&A-Background.webp';
 import WeddingPlace from './Sections/WeddingPlace';
-import Projects from './Sections/Recommendations';
+import Recommendations from './Sections/Recommendations';
 import AboutMe from './Sections/AboutMe';
 import SectionContainer from '../components/SectionContainer';
-import Divider from '../assets/icons/Divider';
+import Divider from '../utility/Divider';
 
 const Home = () => {
   const [t] = useTranslation('translation');
   return (
-    <div className="!scroll-smooth">
+    <div className="!scroll-smooth flex flex-col items-center justify-center">
       <SectionContainer className="md:pb-10 pb-20 flex flex-col gap-y-10">
         <div className="md:text-left flex flex-col items-center">
           {/* // - HEADER */}
@@ -28,11 +28,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <Divider className="mt-8" />
+          <Divider />
         </div>
       </SectionContainer>
       <WeddingPlace />
-      <Projects />
+      <Divider />
+      <Recommendations />
+      <Divider />
       <AboutMe />
     </div>
   );

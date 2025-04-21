@@ -181,7 +181,7 @@ const NavBar = () => {
                         alt={t('Button to Section Recommendations')}
                       >
                         {/* <Code className="size-6 mr-1" /> */}
-                        {t('Recommendations')}
+                        {t('Recomendación')}
                       </Link>
                     </li>
                     <li>
