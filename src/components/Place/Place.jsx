@@ -90,10 +90,10 @@ const Place = () => {
               onClick={() =>
                 window.open('https://goo.gl/maps/9v2Y1a5Z3xk', '_blank')
               }
-              className="mt-8 text-4xl bg-white text-blueLightWedding font-bold py-4 px-12 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
+              className="mt-8 text-2xl bg-white text-blueLightWedding font-bold py-4 px-12 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
             >
-              <WeddingPlace className="inline-block mr-2 w-10" />
-              {t('Open Map')}
+              <WeddingPlace className="inline-block mr-2 w-8" />
+              {t('Abrir en Google Maps')}
             </button>
           </div>
         </div>

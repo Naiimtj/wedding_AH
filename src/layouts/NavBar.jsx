@@ -22,8 +22,10 @@ const NavBar = () => {
       const scrollPosition = window.scrollY + windowHeight / 2;
 
       const weddingPlaceSection = document.getElementById('wedding-place');
-      const projectsSection = document.getElementById('recommendations');
-      const aboutMeSection = document.getElementById('about-me');
+      const recommendationsSection = document.getElementById('recommendations');
+      const arrivalSection = document.getElementById('arrival');
+      const interestDestinationsSection = document.getElementById('interest-destinations');
+      const GiftSection = document.getElementById('gift');
 
       if (
         weddingPlaceSection &&
@@ -33,18 +35,30 @@ const NavBar = () => {
       ) {
         setActiveSection('wedding-place');
       } else if (
-        projectsSection &&
-        projectsSection.offsetTop <= scrollPosition &&
-        projectsSection.offsetTop + projectsSection.offsetHeight >
+        recommendationsSection &&
+        recommendationsSection.offsetTop <= scrollPosition &&
+        recommendationsSection.offsetTop + recommendationsSection.offsetHeight >
           scrollPosition
       ) {
         setActiveSection('recommendations');
       } else if (
-        aboutMeSection &&
-        aboutMeSection.offsetTop <= scrollPosition &&
-        aboutMeSection.offsetTop + aboutMeSection.offsetHeight > scrollPosition
+        arrivalSection &&
+        arrivalSection.offsetTop <= scrollPosition &&
+        arrivalSection.offsetTop + arrivalSection.offsetHeight > scrollPosition
       ) {
-        setActiveSection('about-me');
+        setActiveSection('arrival');
+      } else if (
+        interestDestinationsSection &&
+        interestDestinationsSection.offsetTop <= scrollPosition &&
+        interestDestinationsSection.offsetTop + interestDestinationsSection.offsetHeight > scrollPosition
+      ) {
+        setActiveSection('interest-destinations');
+      } else if (
+        GiftSection &&
+        GiftSection.offsetTop <= scrollPosition &&
+        GiftSection.offsetTop + GiftSection.offsetHeight > scrollPosition
+      ) {
+        setActiveSection('gift');
       } else {
         setActiveSection(null);
       }
@@ -180,49 +194,45 @@ const NavBar = () => {
                         onClick={() => scrollToSection('recommendations')}
                         alt={t('Button to Section Recommendations')}
                       >
-                        {/* <Code className="size-6 mr-1" /> */}
                         {t('Recomendación')}
                       </Link>
                     </li>
                     <li>
                       <Link
                         className={`${
-                          activeSection === 'about-me'
+                          activeSection === 'arrival'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection('about-me')}
-                        alt={t('Button to About Me')}
+                        onClick={() => scrollToSection('arrival')}
+                        alt={t('Button to arrival options')}
                       >
-                        {/* <ProfileCheck className="size-6 mr-1" /> */}
-                        {t('Arrival options')}
+                        {t('Opciones de llegada')}
                       </Link>
                     </li>
                     <li>
                       <Link
                         className={`${
-                          activeSection === 'about-me'
+                          activeSection === 'interest-destinations'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection('about-me')}
-                        alt={t('Button to About Me')}
+                        onClick={() => scrollToSection('interest-destinations')}
+                        alt={t('Button to interest destinations')}
                       >
-                        {/* <ProfileCheck className="size-6 mr-1" /> */}
-                        {t('Interest Destinations')}
+                        {t('Destinos de interés')}
                       </Link>
                     </li>
                     <li>
                       <Link
                         className={`${
-                          activeSection === 'about-me'
+                          activeSection === 'gift'
                             ? 'dark:text-blueWedding font-bold text-blueLightWedding'
                             : 'dark:text-grayWedding text-grayLightWedding '
                         } text-base md:text-base lg:text-xl md:pr-4 my-2 md:my-0 hover:text-blueLightWedding dark:hover:text-blueWedding transition duration-300 flex items-center`}
-                        onClick={() => scrollToSection('about-me')}
-                        alt={t('Button to About Me')}
+                        onClick={() => scrollToSection('gift')}
+                        alt={t('Button to Gift')}
                       >
-                        {/* <ProfileCheck className="size-6 mr-1" /> */}
                         {t('Gift')}
                       </Link>
                     </li>

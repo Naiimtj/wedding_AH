@@ -2,9 +2,11 @@ import { useTranslation } from 'react-i18next';
 import BigBackgraoundHA from '/H&A-Background.webp';
 import WeddingPlace from './Sections/WeddingPlace';
 import Recommendations from './Sections/Recommendations';
-import AboutMe from './Sections/AboutMe';
+import Gift from './Sections/Gift';
 import SectionContainer from '../components/SectionContainer';
 import Divider from '../utility/Divider';
+import ArrivalOptions from './Sections/ArrivalOptions';
+import InterestDestinations from './Sections/InterestDestinations';
 
 const Home = () => {
   const [t] = useTranslation('translation');
@@ -35,7 +37,11 @@ const Home = () => {
       <Divider />
       <Recommendations />
       <Divider />
-      <AboutMe />
+      <ArrivalOptions />
+      <Divider />
+      <InterestDestinations />
+      <Divider />
+      <Gift />
     </div>
   );
 };

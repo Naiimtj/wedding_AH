@@ -7,10 +7,10 @@ const ThemeSwitcher = () => {
   const initTheme =
     typeof localStorage !== "undefined" && localStorage.getItem("theme")
       ? localStorage.getItem("theme")
-      : "dark";
+      : "light";
   const [theme, setTheme] = useState(initTheme);
   useEffect(() => {
-    const matchMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    const matchMedia = window.matchMedia("(prefers-color-scheme: light)");
 
     const handleThemeChange = () => setTheme(initTheme);
 
