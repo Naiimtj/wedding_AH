@@ -14,7 +14,7 @@ const ArrivalOptionsToGo = () => {
         <Option
           imagen="/tren-morroco.webp"
           title="Tren"
-          text="(Taxi 30 minutos hasta estación de tren en Fez) Recomendamos comprar los billetes online"
+          text="(Taxi 30 minutos hasta estación de tren en Fez) Recomendamos comprar los billetes online y primera clase para mayor comodidad."
           buttonText="Comprar billetes"
           url="https://www.oncf-voyages.ma/"
         />
