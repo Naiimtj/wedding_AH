@@ -233,7 +233,7 @@ const NavBar = () => {
                         onClick={() => scrollToSection('gift')}
                         alt={t('Button to Gift')}
                       >
-                        {t('Gift')}
+                        {t('Regalo')}
                       </Link>
                     </li>
                   </ul>

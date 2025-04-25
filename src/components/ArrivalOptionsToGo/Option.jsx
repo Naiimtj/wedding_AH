@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Option = ({ imagen, title, text, buttonText, url }) => {
   return (
-    <div className="relative flex flex-col items-center justify-center mt-8 w-1/2 h-96">
+    <div className="relative flex flex-col items-center justify-center md:mt-8 md:w-1/2 w-[320px] md:h-96 h-80">
       <img
         className="object-cover w-full h-full rounded-xl"
         src={imagen}
@@ -13,14 +13,14 @@ const Option = ({ imagen, title, text, buttonText, url }) => {
           {title}
         </div>
         {text ? (
-          <div className="text-xl text-center w-full h-full p-8 rounded-xl">
+          <div className="text-xl text-center w-full h-full lg:p-8 rounded-xl">
             {text}
           </div>
         ) : null}
         {url ? (
           <button
             onClick={() => window.open(url, '_blank')}
-            className="border border-blueLightWedding text-4xl bg-white text-blueLightWedding font-bold py-4 px-12 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
+            className="border border-blueLightWedding md:text-4xl bg-white text-blueLightWedding font-bold md:py-4 md:px-12 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
           >
             {buttonText}
           </button>

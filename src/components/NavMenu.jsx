@@ -1,13 +1,13 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import ThemeSwitcher from "./ThemeToggle";
-import SelectLanguage from "./SelectLanguage";
+// import SelectLanguage from "./SelectLanguage";
 
-const NavMenu = ({isMobileMenu}) => {
+const NavMenu = (/*{isMobileMenu}*/) => {
   return (
     <>
       <ThemeSwitcher />
       <div className="md:mt-2 z-50">
-        <SelectLanguage isMobileMenu={isMobileMenu}/>
+        {/* <SelectLanguage isMobileMenu={isMobileMenu}/> */}
       </div>
     </>
   );
@@ -15,9 +15,9 @@ const NavMenu = ({isMobileMenu}) => {
 
 export default NavMenu;
 
-NavMenu.defaultProps = {
-  isMobileMenu: false,
-};
-NavMenu.propTypes = {
-  isMobileMenu: PropTypes.bool,
-};
+// NavMenu.defaultProps = {
+//   isMobileMenu: false,
+// };
+// NavMenu.propTypes = {
+//   isMobileMenu: PropTypes.bool,
+// };

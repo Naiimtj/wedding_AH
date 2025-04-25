@@ -20,18 +20,18 @@ const GiftContent = () => {
 
   return (
     <div className="flex flex-col items-center gap-y-8 text-blueLightWedding dark:text-blueWedding">
-      <div className="text-xl text-center w-2/3">
+      <div className="text-xl text-center md:w-2/3">
         {t(
           'Tu presencia es nuestro mayor regalo... pero si te apetece apoyarnos en nuestra nueva andadura te facilitamos opciones.'
         )}
       </div>
-      <div className="relative flex flex-col items-center justify-center w-2/3 h-96">
-        <div className="absolute flex flex-col justify-between gap-4 text-2xl text-blueLightWedding dark:text-blueWedding border border-blueWedding shadow-xl text-center w-full p-8 rounded-xl">
+      <div className="relative flex flex-col items-center justify-center md:w-2/3 w-full md:h-96 h-72">
+        <div className="absolute flex flex-col justify-between gap-4 text-2xl text-blueLightWedding dark:text-blueWedding border border-blueWedding shadow-xl text-center w-full md:p-8 p-2 rounded-xl">
           <div className="flex flex-col items-center">
             <div className="text-2xl font-bold text-center">
               {t('Transferencia Bancaria')}
             </div>
-            <div className="flex items-center justify-between p-4 font-normal rounded-xl border border-blueWedding w-2/3">
+            <div className="md:text-xl text-lg flex md:flex-row flex-col items-center justify-between p-4 font-normal rounded-xl border border-blueWedding md:w-2/3">
               ES04 2100 2383 2801 0018 7780
               {!copied ? (
                 <button
@@ -52,7 +52,7 @@ const GiftContent = () => {
           </div>
           <div className="flex flex-col items-center">
             <div className="text-2xl font-bold text-center">{t('Bizum')}</div>
-            <div className="font-normal p-4 rounded-xl border border-blueWedding w-2/3">
+            <div className="md:text-xl text-lg font-normal p-4 rounded-xl border border-blueWedding md:w-2/3 w-full">
               +34 630940492
             </div>
           </div>

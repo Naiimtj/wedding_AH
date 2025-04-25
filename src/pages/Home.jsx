@@ -12,7 +12,7 @@ const Home = () => {
   const [t] = useTranslation('translation');
   return (
     <div className="!scroll-smooth flex flex-col items-center justify-center">
-      <SectionContainer className="md:pb-10 pb-20 flex flex-col gap-y-10">
+      <SectionContainer className="md:pb-10 flex flex-col md:gap-y-10">
         <div className="md:text-left flex flex-col items-center">
           {/* // - HEADER */}
           <div className="relative flex flex-col mb-4 items-center md:mt-11 mt-20">
