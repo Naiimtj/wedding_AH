@@ -87,7 +87,7 @@ const Place = () => {
 
             <button
               onClick={() =>
-                window.open('https://goo.gl/maps/9v2Y1a5Z3xk', '_blank')
+                window.open('https://maps.app.goo.gl/FH4CAdikpkdL3ZDAA', '_blank')
               }
               className="md:mt-8 lg:text-2xl bg-white text-blueLightWedding font-bold py-4 md:px-12 px-4 rounded-lg shadow-lg hover:bg-blueLightWedding hover:text-white hover:shadow-xl transition duration-300"
             >
