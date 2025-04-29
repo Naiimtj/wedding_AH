@@ -76,7 +76,7 @@ const Place = () => {
               className="text-center lg:text-2xl cursor-pointer hover:text-blueWedding transition duration-300"
               onClick={() =>
                 window.open(
-                  'https://maps.app.goo.gl/YozrxzmLFz2kVa4L6',
+                  'https://maps.app.goo.gl/FH4CAdikpkdL3ZDAA',
                   '_blank'
                 )
               }
