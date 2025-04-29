@@ -7,7 +7,7 @@ const InterestDestinationsContent = () => {
     <div className="flex flex-col items-center gap-y-8 text-blueLightWedding dark:text-blueWedding">
       <div className="text-xl text-center md:w-2/3">
         {t(
-          'Quizá te apetezca quedarte unos días más en Marruecos para visitar el país y disfrutar de sus ciudades, paisajes y gastronomía. Estos son algunas ciudades de interés con aeropuerto para elaborar vuestro itinerario.'
+          'Quizá te apetezca quedarte unos días más en Marruecos para visitar el país y disfrutar de sus ciudades, paisajes y gastronomía. Estas son algunas ciudades de interés con aeropuerto para elaborar vuestro itinerario.'
         )}
       </div>
       <div className="grid md:grid-cols-1 lg:grid-cols-2 justify-items-center gap-4 xl:mx-8">
