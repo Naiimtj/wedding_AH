@@ -14,7 +14,7 @@ const Place = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2025-06-27T21:00:00');
+    const targetDate = new Date('2025-06-27T20:00:00');
     const interval = setInterval(() => {
       const now = new Date();
       const difference = targetDate - now;
@@ -60,7 +60,7 @@ const Place = () => {
           <div className="flex flex-col items-center gap-8">
             <Dinner />
             <div className="font-bold text-center">
-              <div className="text-3xl font-semibold">{t('21:00 - 6:00')}</div>
+              <div className="text-3xl font-semibold">{t('20:00 - 6:00')}</div>
               <div className="text-xl font-semibold">
                 {t('Sí... toda la noche')}
               </div>
